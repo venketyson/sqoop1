@@ -1,0 +1,18 @@
+create table employee (name varchar(20),dept varchar(20),sal int,location varchar(20));
+insert into table employee values ("hari","cs",7000,"chennai");
+insert into table employee values ("hari","cs",7000,"chennai");
+insert into table employee values ("hari","cs",7000,"chennai");
+insert into table employee values ("hari","cs",7000,"chennai");
+insert into table employee values ("hari","cs",7000,"chennai");
+insert into table employee values ("hari","cs",7000,"chennai");
+insert into table employee values ("hari","cs",7000,"chennai");
+insert into table employee values ("hari","cs",7000,"chennai");
+insert into table employee values ("hari","cs",7000,"chennai");
+insert into table employee values ("hari","cs",7000,"chennai");
+insert into table employee values ("hari","cs",7000,"chennai");
+
+
+
+
+sqoop import --connect jdbc:mysql://localhost:3306/s -username root --split-by id --cloumns name,dept,sal,location --table employee  --target-dir /user/acadgild/pro   --hive-import --create-hive-table --hive-table default.emp_data;
+
